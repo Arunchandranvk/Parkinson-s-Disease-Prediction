@@ -1,0 +1,331 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+  body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	background: #182430;
+}
+
+.font-weight-100 {
+	font-weight: 100;
+}
+
+.letter-spacing-4px {
+	letter-spacing: 4px;
+}
+
+.bg-dark-primary {
+	background-color: #182430;
+    
+}
+
+.bg-dark-secondary {
+	background-color: #071116;
+}
+
+.background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#showcase-background-1 {
+   
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("{% static 'images/1.jpg' %}");
+	height: 655px;
+    width:100%;
+}
+
+#showcase-background-2 {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("https://raw.githubusercontent.com/Jesus-E-Rodriguez/Concert/master/images/audience.jpg");
+}
+.btn-gradient {
+	background: linear-gradient(217deg, #f8174b, #7f1fa3 70.71%);
+	border: 1px solid rgba(72, 48, 48, 0.5);
+}
+.cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.grid {
+	display: grid;
+}
+
+.grid-center {
+	place-items: center;
+}
+
+.text-red {
+	color: #f8174b;
+}
+
+a.text-red:hover {
+	color: #f8174b;
+}
+
+.btn-outline-red {
+	border: 1px solid #f8174b;
+	background: transparent;
+}
+
+.form-outline-gray {
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.5;
+	background: transparent;
+	padding: 0.375rem 0.75rem;
+	outline: 0;
+	border: none;
+	border-radius: 0px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	color: #f8174b;
+	transition: border-color 0.15s ease-in-out;
+}
+
+.form-outline-gray:focus,
+.form-outline-gray:active {
+	border-color: #f8174b;
+}
+
+.form-outline-gray:focus ~ .label-absolute,
+.form-outline-gray:valid ~ .label-absolute {
+	color: #f8174b;
+	top: -1.1rem;
+	left: 0;
+	-webkit-transform: scale(0.8);
+	transform: scale(0.8);
+}
+
+.label-absolute {
+	position: absolute;
+	top: 0.5rem;
+	left: 0.8rem;
+	color: #f2f4f3;
+	-webkit-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.hr-red {
+	display: inline-block;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 3px solid rgb(248, 23, 75);
+	width: 15em;
+}
+
+.position-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.position-bottom {
+	bottom: 1rem;
+}
+
+.h-500px {
+	height: 500px;
+}
+
+  </style>
+  <body>
+  
+ 
+        <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark-secondary sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#" style="font-size: 30px;">NeuroMentorParkinsons</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-uppercase font-weight-100 letter-spacing-4px" href="{% url 'h' %}">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase font-weight-100 letter-spacing-4px" href="{% url 'bot' %}">Chatbot
+                            </a>
+                        </li>
+                        <li class="nav-item ml-5">
+                            <a class=" btn btn-outline-dark nav-link text-uppercase font-weight-100 letter-spacing-4px" href="">Disease Prediction</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% block bot %}
+    <main>
+        <section class="background grid " id="showcase-background-1">
+            <div class="container text-white" style="margin-top:300px;">
+                <h1 class=" mb-3">NeuroMentorParkinsons</h1>
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <p>Parkinson's disease is a neurodegenerative disorder that affects movement, causing tremors, stiffness, and difficulty with balance and coordination. It progresses slowly over time, often starting with subtle symptoms and worsening over years. While there is no cure for Parkinson's disease, treatments such as medication and therapy can help manage symptoms and improve quality of life for those affected.</p>
+                    </div>
+                </div>
+                {% comment %} <a class="pr-5 pl-5 pt-2 pb-2 text-white btn text-uppercase font-weight-bold btn-gradient" href="#">Order Now</a> {% endcomment %}
+            </div>
+        </section>
+
+ </main>
+ <section class="pb-5 pt-5 bg-dark-secondary text-white">
+<header>
+        <h2 class="text-center mb-4 ">Parkinson's Disease Information</h2>
+    </header>
+    <div class="container">
+        <h4>What is Parkinson's Disease?</h4>
+        <p>
+            Parkinson's disease is a progressive neurological disorder that affects movement. It occurs when nerve cells in the brain, specifically in the substantia nigra, become impaired or die. These cells are responsible for producing dopamine, a neurotransmitter that helps regulate movement and coordination.
+        </p>
+        <h4>Common Symptoms</h4>
+        <ul>
+            <li>Tremors: Involuntary shaking, usually starting in the hands, fingers, or limbs, especially when at rest.</li>
+            <li>Bradykinesia: Slowness of movement, which can make simple tasks difficult and time-consuming.</li>
+            <li>Muscle stiffness: Stiffness or rigidity in the limbs, which can lead to decreased range of motion and mobility.</li>
+            <li>Impaired balance and coordination: Difficulty with balance and coordination, leading to problems with walking and performing daily activities.</li>
+        </ul>
+        <h4>Treatment and Management</h4>
+        <p>
+            While there is currently no cure for Parkinson's disease, treatments such as medication, physical therapy, and deep brain stimulation can help manage symptoms and improve quality of life for individuals living with the condition.
+        </p>
+        <h4>Further Resources</h4>
+        <p>
+            For more information about Parkinson's disease, its symptoms, and available treatments, consider consulting with a healthcare professional or visiting reputable medical websites such as the <a href="https://www.parkinson.org/">Parkinson's Foundation</a>.
+        </p>
+    </div>
+    <header>
+        <h2 class="text-center mb-4  mt-5">Stages of Parkinson's Disease</h2>
+    </header>
+    <div>
+    <img src="{% static 'images/stages.jpg' %}"  alt="" height="450px" width="700px" style="margin-left: 400px;">
+    </div>
+    <div class="container mt-4">
+        <h4>1. Stage 1 - Early Parkinson's Disease:</h4>
+        <p>
+            In the early stages, symptoms may be mild and may not significantly interfere with daily activities. Tremors or other motor symptoms usually affect only one side of the body. Symptoms may include slight tremors, changes in posture, and mild stiffness or slowness of movement.
+        </p>
+        <h4>2. Stage 2 - Moderate Parkinson's Disease:</h4>
+        <p>
+            Symptoms become more pronounced and begin to affect both sides of the body. Tremors, stiffness, and slowness of movement become more noticeable and may interfere with daily tasks. Posture and balance may also be affected, increasing the risk of falls.
+        </p>
+        <h4>3. Stage 3 - Mid-Stage Parkinson's Disease:</h4>
+        <p>
+            Symptoms become more severe and significantly impact daily life. Balance and coordination issues become more prominent, making walking and performing daily activities more challenging. Falls become more frequent, and individuals may experience difficulty with activities such as getting out of chairs or turning over in bed.
+        </p>
+        <h4>4. Stage 4 - Advanced Parkinson's Disease:</h4>
+        <p>
+            Symptoms are severe and may require assistance with daily activities. Motor symptoms such as tremors, stiffness, and bradykinesia are prominent and may be difficult to manage with medication alone. Mobility becomes severely impaired, and individuals may require assistance with walking or using a wheelchair.
+        </p>
+        <h4>5. Stage 5 - Advanced Parkinson's Disease with Late-Stage Complications:</h4>
+        <p>
+            Symptoms are extremely severe, and individuals may be largely immobile and require full-time care. Cognitive decline and behavioral changes may occur, affecting memory, decision-making, and mood. Other complications such as swallowing difficulties, speech problems, and bladder or bowel issues may also arise.
+        </p>
+    </div>
+    <header>
+        <h2 class="text-center mb-4  mt-5">Types of Parkinson's Disease</h2>
+    </header>
+    <div>
+        <img src="{% static 'images/types.webp' %}"  alt="" height="450px" width="700px" style="margin-left: 400px;">
+        </div>
+    <div class="container mt-5">
+        <h4>1. Primary Parkinsonism (Idiopathic Parkinson's Disease):</h4>
+        <p>
+            Idiopathic Parkinson's disease (IPD) is the most common form of Parkinsonism, accounting for approximately 85-90% of cases. It is a neurodegenerative disorder characterized by the gradual loss of dopamine-producing neurons in the substantia nigra region of the brain. This loss of dopamine leads to the classic motor symptoms of Parkinson's disease, including tremors, rigidity, bradykinesia (slowness of movement), and postural instability.
+        </p>
+        <h6>Symptoms:</h6>
+        <ul>
+            <li>Tremors: Involuntary shaking, usually starting in the hands, fingers, or limbs, especially when at rest.</li>
+            <li>Rigidity: Stiffness or inflexibility of the limbs and trunk.</li>
+            <li>Bradykinesia: Slowness of movement, making simple tasks difficult and time-consuming.</li>
+            <li>Postural instability: Impaired balance and coordination, leading to difficulty with walking and an increased risk of falls.</li>
+        </ul>
+        <h6>Treatment:</h6>
+        <p>
+            Treatment aims to manage symptoms and improve quality of life. It typically involves medications to increase dopamine levels in the brain, such as levodopa, dopamine agonists, and MAO-B inhibitors. Physical therapy, occupational therapy, and lifestyle modifications may also be recommended.
+        </p>
+        <h4>2. Dementia with Lewy Bodies (DLB):</h4>
+        <p>
+            Dementia with Lewy bodies (DLB) is a neurodegenerative disorder characterized by the accumulation of abnormal protein deposits, called Lewy bodies, in the brain. DLB shares some similarities with both Parkinson's disease and Alzheimer's disease, as it can cause cognitive decline, motor symptoms, and psychiatric symptoms.
+        </p>
+        <h6>Symptoms:</h6>
+        <p>
+            In addition to the motor symptoms of Parkinson's disease, individuals with DLB experience cognitive impairment, including memory loss, executive dysfunction, and visual hallucinations. Psychiatric symptoms such as depression, anxiety, and apathy may also occur. Fluctuations in cognition and alertness, as well as REM sleep behavior disorder, are common.
+        </p>
+        <h6>Treatment:</h6>
+        <p>
+            Treatment focuses on managing symptoms and may include medications to improve cognitive function, such as acetylcholinesterase inhibitors (e.g., donepezil, rivastigmine). Antipsychotic medications should be used with caution due to the risk of worsening symptoms.
+        </p>
+        <h4>3. Atypical Parkinsonism (Parkinson-Plus Syndromes):</h4>
+        <p>
+            Atypical Parkinsonism refers to a group of neurodegenerative disorders that share some clinical features with Parkinson's disease but have distinct pathological characteristics and often progress more rapidly. Examples include multiple system atrophy (MSA), progressive supranuclear palsy (PSP), and corticobasal degeneration (CBD).
+        </p>
+        <h6>Symptoms:</h6>
+        <p>
+            Symptoms vary depending on the specific subtype of atypical Parkinsonism but may include a combination of motor symptoms (such as tremors, stiffness, and slowness of movement), autonomic dysfunction, cognitive impairment, and other neurological features.
+        </p>
+        <h6>Treatment:</h6>
+        <p>
+            Treatment focuses on symptom management and supportive care, as there are currently no disease-modifying treatments available for most types of atypical Parkinsonism. Medications may be prescribed to alleviate specific symptoms, and physical therapy may help improve mobility and function.
+        </p>
+        <h4>4. Multiple System Atrophy (MSA):</h4>
+        <p>
+            Multiple system atrophy (MSA) is a rare neurodegenerative disorder characterized by a combination of Parkinsonism and autonomic dysfunction. It is divided into two main subtypes: MSA with predominant parkinsonian features (MSA-P) and MSA with predominant cerebellar features (MSA-C).
+        </p>
+        <h6>Symptoms:</h6>
+        <p>
+            Symptoms of MSA vary depending on the subtype but typically include motor symptoms resembling Parkinson's disease, autonomic dysfunction, cerebellar ataxia (affecting coordination and balance), and other neurological features. Rapid progression and poor response to levodopa are common.
+        </p>
+        <h6>Treatment:</h6>
+        <p>
+            Treatment focuses on managing symptoms and improving quality of life. Levodopa and other Parkinson's medications may provide some relief of motor symptoms in the early stages, but their effectiveness tends to decline over time. Supportive therapies such as physical therapy, occupational therapy, and speech therapy may also be beneficial.
+        </p>
+    </div>
+    <header>
+        <h2 class="text-center mb-4  mt-5">Symptoms of Parkinson's Disease</h2>
+    </header>
+    <div>
+        <img src="{% static 'images/s1.webp' %}"  alt="" height="450px" width="700px" style="margin-left: 50px;">
+        <img src="{% static 'images/s2.jpg' %}"  alt="" height="450px" width="700px" style="margin-left: 10px;"> <br>
+        <img src="{% static 'images/s3.png' %}" class="mt-5"  alt="" height="450px" width="700px" style="margin-left: 400px;">
+        </div>
+
+ </section> 
+        
+
+    <footer class="text-white pt-3 pb-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            
+          
+                <p>&copy; 2024 Parkinson's Disease Information Center</p>
+            
+        </div>
+    </footer> 
+{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,83 @@
+ {% extends "home.html" %}
+ {% block bot %}
+{% load static %}
+
+
+  <script>
+    function ask() {
+        var userInput = document.getElementById("user_input").value;
+        document.getElementById("user_input").value = "";
+        if (userInput.trim()) {
+            document.forms[0].submit();
+        }
+    }
+</script>
+ 
+  <style>
+    /* Custom CSS for Parkinson's Disease Chatbot */
+
+/* Body styles */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: Arial, sans-serif; /* Default font family */
+}
+
+/* Container styles */
+.container {
+    max-width: 1600px; /* Limit container width */
+
+}
+
+/* Image styles */
+.img-fluid {
+    display: block; /* Make the image responsive */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px; /* Add spacing between form elements */
+}
+
+.form-control {
+    resize: none; /* Disable textarea resizing */
+}
+
+/* Button styles */
+.btn-primary {
+    width: 100%; /* Make the button full-width */
+    margin-top: 10px; /* Add spacing above the button */
+}
+
+/* Chat history styles */
+.chat-history {
+    margin-top: 20px; /* Add spacing above the chat history */
+}
+
+.chat-history p {
+    margin-bottom: 5px; /* Add spacing between chat messages */
+}
+
+  </style>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="{% static 'images/image.png' %}" alt="Parkinson's Disease Chatbot" class=" mb-1" height="300px" width="100%">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <textarea id="user_input" name="user_input" rows="3" class="form-control" placeholder="Type your message here...">{{ user_input }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Ask</button>
+            </form>
+            
+        </div>
+        <div class="mt-4 ml-5 mr-5">
+            {% if bot_response %}
+                <p class="mb-1">You: {{ user_input }}</p>
+                <p>Response: {{ bot_response }}</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
