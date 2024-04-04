@@ -10,7 +10,7 @@ import os
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 try:
     pdfreader = PdfReader(r"/home/hazeeba/Documents/Luminar_internship/Parkinson/P5_Parkinson/Parkinson_pdf.pdf")
