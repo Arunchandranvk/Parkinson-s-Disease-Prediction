@@ -10,7 +10,7 @@ import os
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 
 def Chatbot(request):
